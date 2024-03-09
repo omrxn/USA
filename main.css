@@ -1,0 +1,67 @@
+*{
+    padding:  0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+scroll-behavior:smooth;
+background-image: url("../img/hl.gif");
+
+
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+nav{
+
+    overflow:hidden;
+    background-color: black;
+    
+}
+
+nav a{
+    float: left;
+   display: block;
+   color: gray;
+   text-align: center;
+   padding: 23px 89px;
+   text-decoration: none;
+   font-size: 17px;
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+  
+  
+}
+
+
+@keyframes example
+{
+    0%   {border-color:red; }
+    25%  {border-color:yellow; }
+    50%  {border-color:blue; }
+    75%  {border-color:green; }
+    100% {border-color:red; }
+}
+
+nav a:hover {
+       
+        color:white;
+        border-block-end:6px white solid;
+}
+nav a:active{
+    background-color:gray;
+
+}
+nav a.on{
+    border-block-end:6px  whitesmoke solid;
+    color:white;
+
+    
+  
+
+}
+
+

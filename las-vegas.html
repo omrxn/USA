@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <title>LAS-VEGAS</title>
+
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta charset="UTF-8">
+      <link rel="shortcut icon" href="../img/favicon-32x32.png" type="image/x-icon">
+        <link rel="stylesheet" href="../src/vegas.css">
+
+        
+        <style>
+          * {box-sizing: border-box}
+          body { margin:0}
+          .mySlides {display: none}
+          img { 
+            vertical-align: middle;
+            height: 630px;
+            width: 100%;
+          }
+          /* Slideshow container */
+          .slideshow-container {
+            max-width: 100%;
+            position: relative;
+          }
+          /* Next & previous buttons */
+          .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+          }
+          /* Position the "next button" to the right */
+          .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+          }
+          /* On hover, add a black background color with a little bit see-through */
+          .prev:hover, .next:hover .active, .dot:hover {
+            background-color: rgba(0,0,0,0.8);
+          }
+          /* Caption text */
+          .text {
+            color: whitesmoke;
+            font-size: 66px;
+            font-weight: 800;
+            position: absolute;
+            top: 350px;
+            left: 60px;
+            text-align: center;
+            border-left: 8px goldenrod solid;
+            text-shadow: 0 0 5px black;
+            padding-left: 10px;
+            animation-name: exam;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            font-family:Tahoma, sans-serif;
+          }
+          @keyframes exam {
+
+            0%   {border-color:red; }
+            25%  {border-color:yellow; }
+            50%  {border-color:blue; }
+            75%  {border-color:green; }
+            100% {border-color:red; }
+          }
+
+          /* The dots/bullets/indicators */
+          .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.8s ease;
+          }
+          .active, .dot:hover {
+            background-color: black;
+          }
+          /* Fading animation */
+          .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+          }
+          @keyframes fade {
+            from {opacity: .4}
+            to {opacity: 1}
+          }
+          /* On smaller screens, decrease text size */
+          @media only screen and (max-width: 300px) {
+            .prev, .next,.text {font-size: 11px}
+          }
+          </style>
+
+    </head>
+    <body>
+      <!-- adding background song a song  -->
+      <audio  autoplay loop >
+        <source src="../src/Dimitri Vegas & Like Mike vs W&W & Moguai -  Arcade Mammoth (Official Music Video).mp3" >
+    </audio>
+    
+    <!-- navbar -->
+        <div class="nav">
+            <a href="main.html">Home</a>
+            <a href="la.html" >LA</a>
+            <a href="" class="on">Las Vegas</a>
+        </div>
+        <!-- slideshow -->
+        <div class="slideshow-container">
+          <!-- applying the fade effect -->
+            <div class="mySlides fade">
+          <!-- adding images -->
+              <img src="../img/vv.jpg" style="width:100%">
+              <div class="text">LAS VEGAS</div>
+            </div>
+            <!-- applying the fade effect -->
+            <div class="mySlides fade">
+              <!-- adding images -->
+              <img src="../img/sphere.jpg" style="width:100%">
+              <div class="text">SPHERE/DOME</div>
+            </div>
+            <!-- applying the fade effect -->
+            <div class="mySlides fade">
+              <!-- adding images -->
+              <img src="../img/hotels.jpg" style="width:100%">
+              <div class="text">HOTELS!</div>
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+            </div>
+            <br>
+            <!-- the dots -->
+            <div style="text-align:center">
+              <span class="dot" onclick="currentSlide(1)"></span>
+              <span class="dot" onclick="currentSlide(2)"></span>
+              <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
+        <script>
+          // some js for auto slide
+          let slideIndex = 0;
+          showSlides(slideIndex);
+          function plusSlides(n) {
+            showSlides(slideIndex += n);
+          }
+          function currentSlide(n) {
+            showSlides(slideIndex = n);
+          }
+          function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+          }
+          function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}
+            slides[slideIndex-1].style.display = "block";
+            setTimeout(showSlides, 6000); // Change image every 6 seconds
+          }
+        </script>
+
+            <!-- ading text -->
+              <div class="txt">LAS-VEGAS</div>
+              <h2 style="font-family: Tahoma, sans-serif;margin-left: 35px;">
+                Las Vegas, often known simply as Vegas, is the most populous city in the U.S. state of Nevada and the county seat of Clark County. The Las Vegas Valley metropolitan area is the largest within the greater Mojave Desert, and second-largest in the Southwestern United States.
+
+                <!-- adding map -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d423284.6897532054!2d-118.41173249999999!3d34.020479!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c75ddc27da13%3A0xe22fdf6f254608f4!2sLos%20Angeles%2C%20CA%2C%20USA!5e0!3m2!1sen!2slb!4v1709820841459!5m2!1sen!2slb" width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>   
+                <div class="txt">Belliago Hotel</div>
+                <h2 style="font-family: Tahoma, sans-serif;margin-left: 35px;">Bellagio is a resort, luxury hotel and casino on the Las Vegas Strip in Paradise, Nevada. It is owned by Blackstone Inc. and operated by MGM Resorts international</h2>
+                <div class="ig"><img src="../img/bellagio-las-vegas.jpg" ></div>
+            <h2 style="font-family: Tahoma, sans-serif;margin-left: 35px;">Check out this video!!! </h2>
+            `<iframe width="100%" height="600px" 
+            src="https://www.youtube.com/embed/" style="border:none;">
+            </iframe>
+            <footer>
+              
+
+              <img src="../img/omran.jpg">
+              <div clas="all">
+              
+                <div class="to">
+
+                 <p><a href="mailto:someoneexample.com">omranzakr@gmail.com</a></p>
+                </div> 
+                
+              </div>
+              <div class="txre" style="margin-left: 250px;"><h5> dicovering this web page!!!</h5></div>
+            
+          
+
+          </footer>
+          
+    </body>
+</html>

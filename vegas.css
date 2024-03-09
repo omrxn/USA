@@ -1,0 +1,110 @@
+.nav{
+    overflow:hidden;
+    background-color: black;
+
+}
+
+
+
+.nav a{
+  float: left;
+  display: block;
+  color: gray;
+  text-align: center;
+  padding: 23px 89px;
+  text-decoration: none;
+  font-size: 17px;
+  animation-name: ana;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+
+  
+}
+@keyframes ana {
+    0%   {border-color:red; }
+    25%  {border-color:yellow; }
+    50%  {border-color:blue; }
+    75%  {border-color:green; }
+    100% {border-color:red; }
+}
+
+.nav a:hover {
+       
+        color:white;
+        border-block-end:6px white solid;
+}
+.nav a:active{
+    background-color:gray;
+
+}
+.nav a.on{
+    border-block-end:6px  whitesmoke solid;
+    color:white;
+}
+.txt{
+    color: black;
+    font-family: Tahoma, sans-serif;
+    font-size: 66px;
+    font-weight: 800;
+    border-left: 8px goldenrod solid;
+    margin-left: 56px;
+    padding-left: 10px;
+    margin-bottom: 5px;
+    animation-name: op;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    
+} 
+@keyframes op {
+    0%   {border-color:red; }
+    25%  {border-color:yellow; }
+    50%  {border-color:blue; }
+    75%  {border-color:green; }
+   100% {border-color:red; }
+  }
+  iframe{
+    padding-bottom: 15px;
+    width: 100%;
+  } 
+  footer{
+    background-color: black;
+    width: 100%;
+    overflow: hidden;
+
+    color: white;
+    font-family: Tahoma, sans-serif;
+    font-size: 66px;
+    font-weight: 800;
+    border-top: 8px goldenrod solid;
+    
+    animation-name: foot;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+  }
+  @keyframes foot {
+    0%   {border-color:red; }
+    25%  {border-color:yellow; }
+    50%  {border-color:blue; }
+    75%  {border-color:green; }
+   100% {border-color:red; }
+  }
+  footer img{
+    padding-top: 20px;
+    padding-bottom: 5px;
+    position: relative;
+    float: left;
+    height: 200px;
+    width:150px;
+    border-radius: 50%;
+    margin-left: 70px;
+  }
+  footer .all .to p a{
+    position: absolute;
+    font-size: 12px;
+    left: 220px;
+    top: 100px;
+    display: block;
+    text-decoration: none;
+  }
+  
+  

@@ -1,0 +1,228 @@
+.nav{
+    overflow:hidden;
+    background-color: black;
+
+}
+
+
+/* setting the nav bar links */
+
+.nav a{
+  float: left;
+  display: block;
+  color: gray;
+  text-align: center;
+  padding: 23px 89px;
+  text-decoration: none;
+  font-size: 17px;
+  animation-name: ana;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+
+  
+}
+/* adding transition */
+@keyframes ana {
+    0%   {border-color:red; }
+    25%  {border-color:yellow; }
+    50%  {border-color:blue; }
+    75%  {border-color:green; }
+    100% {border-color:red; }
+}
+/* hovering color */
+.nav a:hover {
+       
+        color:white;
+        border-block-end:6px white solid;
+}
+/* color once u click */
+.nav a:active{
+    background-color:gray;
+
+}
+/* the rainbow under the active bar */
+.nav a.on{
+    border-block-end:6px  whitesmoke solid;
+    color:white;
+}
+/* styling text */
+.txt{
+    color: black;
+    font-family: Tahoma, sans-serif;
+    font-size: 66px;
+    font-weight: 800;
+    border-left: 8px goldenrod solid;
+    margin-left: 56px;
+    padding-left: 10px;
+    animation-name: op;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    
+} 
+/* addint to the header a rainbow border */
+@keyframes op {
+    0%   {border-color:red; }
+    25%  {border-color:yellow; }
+    50%  {border-color:blue; }
+    75%  {border-color:green; }
+   100% {border-color:red; }
+  }
+  /* deleting the default frame around the video */
+  iframe{
+    padding-bottom: 15px;
+    border: none;
+    width: 100%;
+  } 
+  /* styling the footer */
+  footer{
+    background-color: black;
+    width: 100%;
+   height: 100%;
+   overflow: hidden;
+
+  
+
+    color: white;
+    font-family: Tahoma, sans-serif;
+    font-size: 66px;
+    font-weight: 800;
+    border-top: 8px goldenrod solid;
+    margin-top:20px;
+    animation-name: foot;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+  }
+  /* addint to the footer rainbow  */
+  @keyframes foot {
+    0%   {border-color:red; }
+    25%  {border-color:yellow; }
+    50%  {border-color:blue; }
+    75%  {border-color:green; }
+   100% {border-color:red; }
+  }
+  /* styling the actors cards */
+  .cards{
+    display: inline-flex;
+    margin-top: 8px;
+}
+
+.image-container{
+    text-align: center;
+    position: relative;
+    height: 540px;
+    width: 394px;
+    overflow: hidden;
+
+}
+
+.image-container a img {
+
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+    transition: transform .2s,opacity 0.2s ease-in-out;
+}
+
+.image-container:hover a img {
+    transform: scale(1.1);
+    opacity: 1;
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+
+.image-container .bgr
+{
+    width:5rem;
+    height: 5rem;
+
+}
+
+
+.image-container .bgr .txb{
+position: absolute;
+bottom: 25px;
+white-space: pre;
+left: 30px;
+color: whitesmoke;
+text-shadow: 0.5px 0px black ;
+font-weight: bold;
+text-align: right;
+font-size: 30px;
+}
+
+.image-container .bgr .txa{
+color:#03fcfc;
+background-color:rgba(2, 168, 168,0.2);
+border-radius: 4px;
+padding: 3px;
+position: absolute;
+display: flex;
+bottom: 75px;
+white-space: inherit;
+left:35px;
+text-align: left;
+font-size: 12px;
+}
+
+.image-container .bgr .txc{
+color:#03fcfc;
+background-color:rgba(2, 168, 168,0.2);
+border-radius: 4px;
+padding: 3px;
+position: absolute;
+display: flex;
+bottom: 75px;
+white-space: inherit;
+left:85px;
+text-align: left;
+font-size: 12px;
+}
+
+.image-container:hover  .bgr
+{
+    width: 290px;
+    height: 110px;
+    position: absolute;
+    bottom:20px;
+    margin: 0px 10px;
+    padding: 1.5em 1.5em 2em;
+    background:  rgba(196, 241, 238, 0.466);
+    border-radius: 1rem;
+    backdrop-filter: blur(5px) ;
+    transition: .2s ease-in-out;
+    color: #fff;
+    z-index: 2;
+    -webkit-transition: .2s ease-in;
+    -moz-transition: .2s ease-in;
+    -ms-transition: .2s ease-in;
+    -o-transition: .2s ease-in;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+}
+/* styling the text and img footer  */
+footer img{
+  padding-top: 20px;
+  padding-bottom: 5px;
+  position: relative;
+  float: left;
+  height: 200px;
+  width:150px;
+  border-radius: 50%;
+  margin-left: 70px;
+}
+footer .all .to p a{
+  position: absolute;
+  font-size: 12px;
+  left: 220px;
+  top: 100px;
+  display: block;
+  text-decoration: none;
+}
+
+
+  
+
